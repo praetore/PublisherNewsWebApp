@@ -1,0 +1,38 @@
+group 'io.github.praetore'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.flywaydb:flyway-gradle-plugin:4.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'org.flywaydb.flyway'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'com.rometools:rome:1.5.1'
+    compile 'com.h2database:h2:1.4.191'
+    compile 'org.flywaydb:flyway-core:4.0'
+    compile 'com.jolbox:bonecp:0.8.0.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+task createDBFolder(dependsOn: compileJava) {
+    def data = new File("data")
+    data.mkdir()
+}

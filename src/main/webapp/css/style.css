@@ -1,0 +1,50 @@
+body {
+    background-color: rgba(106, 199, 151, 0.33);
+}
+
+#banner, #content {
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+}
+
+#content {
+    padding: 1em;
+}
+
+#banner {
+    padding: 0;
+    display: block;
+}
+
+#menu_static {
+    float: left;
+    width: 11em;
+    height: 30em;
+    background-color: rgba(174, 229, 240, 0.73);
+}
+
+#menu_static ul {
+    list-style: none;
+    margin: 2em 0;
+    padding: 0;
+}
+
+#menu_static ul li {
+    margin: .3em 2em;
+}
+
+#dynamic {
+    float: right;
+    width: 26.1em;
+    height: 30em;
+    background-color: rgb(140, 183, 255);
+}
+
+#menu_dynamic a {
+    margin: 1em;
+}
+
+#content_dynamic ul li {
+    list-style: none;
+}

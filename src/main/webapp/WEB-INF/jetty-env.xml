@@ -1,0 +1,12 @@
+<Configure id="wac" class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="jdbc/publisher" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>jdbc/DataSource</Arg>
+        <Arg>
+            <New class="org.h2.Driver">
+                <Set name="Url">jdbc:h2:file:./data/publisher</Set>
+                <Set name="User">publisher</Set>
+                <Set name="Password">publisher</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
